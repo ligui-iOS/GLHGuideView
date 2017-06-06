@@ -113,19 +113,19 @@ typedef enum{
             arrowNameStr = @"rightUp";
             arrowFrame.origin.x = rect.origin.x+rect.size.width-arrowFrame.size.width;
             arrowFrame.origin.y = rect.origin.y+rect.size.height;
-            labelFrame = CGRectMake(rect.origin.x, arrowFrame.origin.y+arrowFrame.size.height, 100, labelHeight);
+            labelFrame = CGRectMake(arrowFrame.origin.x, arrowFrame.origin.y+arrowFrame.size.height, 100, labelHeight);
             break;
         case 3:
             arrowNameStr = @"leftDown";
             arrowFrame.origin.x = rect.origin.x;
             arrowFrame.origin.y = rect.origin.y-arrowFrame.size.height;
-            labelFrame = CGRectMake(rect.origin.x, arrowFrame.origin.y-arrowFrame.size.height, 100,labelHeight);
+            labelFrame = CGRectMake(rect.origin.x, arrowFrame.origin.y-labelHeight, 100,labelHeight);
             break;
         case 4:
             arrowNameStr = @"rightDown";
             arrowFrame.origin.x = rect.origin.x+rect.size.width-arrowFrame.size.width;
             arrowFrame.origin.y = rect.origin.y-arrowFrame.size.height;
-            labelFrame = CGRectMake(rect.origin.x, arrowFrame.origin.y-arrowFrame.size.height, 100, labelHeight);
+            labelFrame = CGRectMake(arrowFrame.origin.x, arrowFrame.origin.y-labelHeight, 100, labelHeight);
             break;
         case 99:
             labelFrame = self.frame;
